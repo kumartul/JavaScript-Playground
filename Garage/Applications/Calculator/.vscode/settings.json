@@ -3,7 +3,7 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath": "/Calculator/dist/style.css"
+            "savePath": "/Calculator/dist/style/"
         }
     ]
 }
