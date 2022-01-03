@@ -14,3 +14,10 @@ html{
     font-family: tahoma;
     font-size: 62.5%;   // Now, 1rem = 10px
 }
+body{
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
