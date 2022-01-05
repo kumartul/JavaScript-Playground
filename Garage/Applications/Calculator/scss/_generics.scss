@@ -14,6 +14,12 @@
     flex-direction: column;
 }
 
+@mixin flex-end {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 @mixin content-center {
     display: flex;
     justify-content: center;
