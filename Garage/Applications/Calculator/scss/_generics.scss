@@ -1,8 +1,8 @@
 @mixin hamburger-line {
-    width: 3rem;
+    width: 2rem;
     height: 1px;
     
-    background-color: $black;
+    background-color: black;
 }
 
 @mixin flex-row {
