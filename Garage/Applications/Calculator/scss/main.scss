@@ -1,2 +1,65 @@
 @import './config';
 @import './variables';
+@import './generics';
+
+.container{
+    background-color: $background-color;
+
+    width: 35rem;
+    height: 50rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    .header{
+        padding: 1rem;
+
+        @include flex-row;
+
+        .hamburger{
+            @include flex-col;
+            @include content-center;
+
+            margin-bottom: 0.9rem;
+            margin-right: 2rem;
+
+            cursor: pointer;
+
+            .line{
+                @include hamburger-line;
+            }
+            .line:nth-child(2){
+                position: relative;
+                top: 0.5rem;
+            }
+            .line:last-child{
+                position: relative;
+                top: 1rem;
+            }
+        }
+
+        h2{
+            font-size: 1.75rem;
+            color: black;
+            letter-spacing: 0.5px;
+        }
+
+        .view-history{
+            margin-left: auto;
+            margin-top: auto;
+
+            button{
+                background-color: transparent;
+
+                border: none;
+                
+                cursor: pointer;
+
+                i{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
