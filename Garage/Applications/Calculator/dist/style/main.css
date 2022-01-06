@@ -29,18 +29,6 @@ body {
           align-items: center;
 }
 
-@media only screen and (max-width: 360px) {
-  body {
-    background-color: red;
-  }
-  .container {
-    width: 100vw !important;
-    height: 100vh !important;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-}
-
 .container {
   background-color: #f3f3f3;
   width: 35rem;
