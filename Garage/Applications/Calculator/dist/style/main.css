@@ -112,6 +112,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -129,6 +130,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -155,7 +157,8 @@ body {
   display: flex;
 }
 
-.container .rows .row .cell {
+.container .rows .row .cell,
+.container .rows .row .u_cell {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,7 +180,8 @@ body {
   transition: 0.15s;
 }
 
-.container .rows .row .cell:last-of-type {
+.container .rows .row .cell:last-of-type,
+.container .rows .row .u_cell:last-of-type {
   background-color: #fafafa;
   font-weight: 300;
   font-size: 2.5rem;
