@@ -29,6 +29,18 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 360px) {
+  body {
+    background-color: red;
+  }
+  .container {
+    width: 100vw !important;
+    height: 100vh !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .container {
   background-color: #f3f3f3;
   width: 35rem;
@@ -109,10 +121,10 @@ body {
   font-size: 1.5rem;
   color: grey;
   letter-spacing: 1px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -127,10 +139,10 @@ body {
   padding-right: 1rem;
   font-size: 4rem;
   font-weight: 500;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
