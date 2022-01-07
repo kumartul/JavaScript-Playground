@@ -1,0 +1,21 @@
+.container{
+    header{
+        .search-bar{
+            height: $search-bar-height;
+
+            #search{
+                width: 100%;
+                height: 100%;
+
+                border: 1px solid lightgrey;
+                border-radius: 10px 10px 0 0;
+
+                color: $fancy-black;
+                font-size: 1.6rem;
+                font-weight: 500;
+
+                padding: 1rem;
+            }
+        }
+    }
+}

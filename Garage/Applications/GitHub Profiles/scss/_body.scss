@@ -1,0 +1,40 @@
+.container{
+    .user{
+        flex-direction: column;
+
+        @include content-center;
+
+        margin-top: 5rem;
+    }
+    img{
+        width: 15rem;
+        height: 15rem;
+        
+        border-radius: 50%;
+
+        margin-bottom: 2.5rem;
+    }
+
+    p{
+        line-height: 2;
+
+        font-size: 1.5rem;
+    }
+
+    a{
+        color: $link-color;
+
+        text-decoration: underline;
+
+        &:hover{
+            color: $link-hover-color;
+
+            transition: 0.1s;
+        }
+    }
+
+    h2{
+        font-size: 1.75rem;
+        color: $fancy-black;
+    }
+}
