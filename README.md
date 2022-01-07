@@ -5,13 +5,13 @@ Create and Destroy
 
 ### Calculator
 
-<img src = "./public/images/Calculator.png" style = "border-radius: 10px">
+<img src = "./public/images/Calculator.png">
 
 ### GitHub Profiles
 
 <div style = "display: flex";>
-	<img src = "./public/images/GitHub Profiles 0.png" style = "border-radius: 10px">
-	<img src = "./public/images/GitHub Profiles 1.png" style = "border-radius: 10px">
+	<img src = "./public/images/GitHub Profiles 0.png" style = "width: 90%;">
+	<img src = "./public/images/GitHub Profiles 1.png" style = "width: 90%;">
 </div>
 
 ---
