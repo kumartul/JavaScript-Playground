@@ -148,7 +148,7 @@ cells.forEach(cell => cell.addEventListener('click', () => {
         // Set the historyBar's value to resultBar's value if the previous character is not
         // (.)
         if(resultBar.textContent[resultBar.textContent.indexOf(char) - 1] !== "."){
-            historyBar.textContent = resultBar.textContent;
+            historyBar.textContent += resultBar.textContent;
         }
 
         // Remove the operator from the resultBar
