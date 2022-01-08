@@ -12,6 +12,8 @@ const historyKeyName = "history";
 
 const historyBtn = document.getElementById('history-btn');
 
+const historySheet = document.querySelector('.history-sheet');
+
 // Monotony will be broken once the user presses '=' or an operator
 // If the monotony is broken, then the current character in the resultBar will be REPLACED
 // by the latest character
@@ -139,7 +141,7 @@ cells.forEach(cell => cell.addEventListener('click', () => {
         // Add the '=' sign for fanciness
         historyBar.textContent = mainExpr + "=";
 
-        addToHistory(mainExpr);
+        addToHistory(historyBar.textContent + resultBar.textContent);
 
         // Get out of the function to handle next iteration
         return;
@@ -218,3 +220,55 @@ cells.forEach(cell => cell.addEventListener('click', () => {
         resultBar.textContent = resultBar.textContent.substring(0, 16);
     }
 }));
+
+// Add an event listener to the history button
+/*  
+    1. Slide the history sheet to the top
+    2. Fetch the expressions from localStorage
+    3. Populate the history sheet
+*/
+historyBtn.addEventListener('click', () => {
+    // If historySheet is up, then send it to the bottom
+    if(historySheet.getAttribute("data-active") === "yes"){
+        historySheet.setAttribute("data-active", "no");
+
+        historySheet.textContent = "";
+
+        // Smooth the movement
+        historySheet.style.transitionDuration = "0.5s";
+        
+        // Move the sheet down
+        historySheet.style.bottom = "-70%";
+
+        // Get out of the function as we don't want any weird behavior
+        return;
+    }
+
+    historySheet.setAttribute("data-active", "yes");
+
+    // Smooth the movement
+    historySheet.style.transitionDuration = "0.5s";
+
+    // Move the sheet up
+    historySheet.style.bottom = "70%";
+
+    const history = JSON.parse(localStorage.getItem(historyKeyName));
+
+    if(!history || history == []){
+        historySheet.innerHTML = `<h2>No History!</h2>`;
+    }
+    else{
+        history.forEach(expr => {
+            const lhs = expr.slice(0, expr.indexOf("="));
+            const rhs = expr.slice(expr.indexOf("=") + 1);
+
+            historySheet.innerHTML += 
+            `
+            <div class = "toast">
+                <p>${lhs} = </p>
+                <p><strong>${rhs}</strong></p>
+            </div>
+            `;
+        });
+    }
+});
