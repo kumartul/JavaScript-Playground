@@ -228,6 +228,10 @@ cells.forEach(cell => cell.addEventListener('click', () => {
     3. Populate the history sheet
 */
 historyBtn.addEventListener('click', () => {
+    // Set this to block because if there was no history before, then the history would
+    // look horrible
+    historySheet.style.display = "block";
+
     // If historySheet is up, then send it to the bottom
     if(historySheet.getAttribute("data-active") === "yes"){
         historySheet.setAttribute("data-active", "no");
@@ -255,7 +259,14 @@ historyBtn.addEventListener('click', () => {
     const history = JSON.parse(localStorage.getItem(historyKeyName));
 
     if(!history || history == []){
-        historySheet.innerHTML = `<h2>No History!</h2>`;
+        historySheet.innerHTML = `<h1>No History!</h1>`;
+
+        historySheet.style.color = "#4a4a4a";
+
+        // Center the message
+        historySheet.style.display = "flex";
+        historySheet.style.justifyContent = "center";
+        historySheet.style.alignItems = "center";
     }
     else{
         history.forEach(expr => {
