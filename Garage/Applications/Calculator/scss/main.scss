@@ -2,6 +2,11 @@
 @import './variables';
 @import './generics';
 
+// Don't display the scrollbar
+::-webkit-scrollbar{
+    display: none;
+}
+
 body{
     overflow: hidden;
 }
@@ -164,6 +169,8 @@ body{
     .history-sheet{
         width: 31rem !important;
 
+        overflow-y: scroll;
+
         padding: 1rem 2rem;
 
         width: 100%;
@@ -183,6 +190,8 @@ body{
         p{
             font-size: 2rem;
             color: #4a4a4a;
+
+            word-break: break-all;
 
             letter-spacing: 5px;
         }

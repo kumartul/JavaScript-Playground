@@ -29,6 +29,10 @@ body {
           align-items: center;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   overflow: hidden;
 }
@@ -214,6 +218,7 @@ body {
 
 .container .history-sheet {
   width: 31rem !important;
+  overflow-y: scroll;
   padding: 1rem 2rem;
   width: 100%;
   height: 70%;
@@ -229,6 +234,7 @@ body {
 .container .history-sheet p {
   font-size: 2rem;
   color: #4a4a4a;
+  word-break: break-all;
   letter-spacing: 5px;
 }
 
