@@ -99,8 +99,7 @@
         .row{
             @include flex-row;
 
-            .cell,
-            .u_cell{
+            .cell{
                 width: 100%;
 
                 @include content-center;
