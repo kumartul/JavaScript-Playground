@@ -64,7 +64,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .container img {
@@ -94,13 +94,14 @@ body {
   font-size: 1.75rem;
   color: #4a4a4a;
 }
-/*# sourceMappingURL=main.css.map */  margin-left: auto;
-  margin-top: auto;
-}
 
-.container .header .view-history button {
-  background-color: transparent;
-  border: none;
+.container .user .fa-heart {
+  margin: 2rem 1.5rem 2rem auto;
+  font-size: 3rem;
+  color: lightgrey;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */der: none;
   cursor: pointer;
 }
 
