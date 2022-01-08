@@ -4,7 +4,7 @@
 
         @include content-center;
 
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     img{
         width: 15rem;
@@ -36,5 +36,18 @@
     h2{
         font-size: 1.75rem;
         color: $fancy-black;
+    }
+
+    .user{
+        .fa-heart{
+            //      top  right  bottom left
+            margin: 2rem 1.5rem 2rem auto;
+
+            font-size: 3rem;
+
+            color: lightgrey;
+
+            cursor: pointer;
+        }
     }
 }
