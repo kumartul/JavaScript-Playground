@@ -29,6 +29,10 @@ body {
           align-items: center;
 }
 
+body {
+  overflow: hidden;
+}
+
 .container {
   background-color: #f3f3f3;
   width: 35rem;

@@ -2,6 +2,10 @@
 @import './variables';
 @import './generics';
 
+body{
+    overflow: hidden;
+}
+
 .container{
     background-color: $background-color;
 
