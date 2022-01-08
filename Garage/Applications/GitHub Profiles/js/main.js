@@ -160,7 +160,7 @@ const displayFavUsers = (favUsers, container) => {
         const response = await fetch(api_url + favUser);
         const responseData = await response.json();
 
-        container.innerHTML += 
+        document.querySelector('.child-container').innerHTML += 
         `<div class = "toast">
             <div class = "image">
                 <img src = "${responseData.avatar_url}" alt = "${responseData.login}'s profile pic">
@@ -191,7 +191,7 @@ searchBar.addEventListener('keydown', event => {
 // favoritesList
 favoriteHeartBtn.addEventListener('click', () => {
     // Clear the container so that new content can be shown
-    userContainer.innerHTML = ``;
+    document.querySelector('.child-container').innerHTML = ``;
 
     displayFavUsers(fetchFavUsers(), userContainer);
 });
