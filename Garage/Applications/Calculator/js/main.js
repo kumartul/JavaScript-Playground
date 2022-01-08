@@ -7,6 +7,11 @@ const historyBar = document.querySelector('.history');
 // Get a reference to all the cells
 const cells = document.querySelectorAll('.cell');
 
+// Key name to access 'history' field in localStorage
+const historyKeyName = "history";
+
+const historyBtn = document.getElementById('history-btn');
+
 // Monotony will be broken once the user presses '=' or an operator
 // If the monotony is broken, then the current character in the resultBar will be REPLACED
 // by the latest character
@@ -21,6 +26,21 @@ let gotResult = false;
 /*
     1. Get the textContent of the cell on which the user clicks
 */
+
+// Function: Adds the expression to localStorage (history)
+const addToHistory = expr => {
+    // Fetch the history as an array
+    let history = JSON.parse(localStorage.getItem(historyKeyName));
+
+    // If there is no history, then initialize it with an empty array
+    if(!history) history = [];
+
+    // Add the expression to history
+    history.unshift(expr);
+
+    localStorage.setItem(historyKeyName, JSON.stringify(history));
+}
+
 cells.forEach(cell => cell.addEventListener('click', () => {
     // Get the value of current key pressed
     let char = cell.textContent;
@@ -118,6 +138,8 @@ cells.forEach(cell => cell.addEventListener('click', () => {
 
         // Add the '=' sign for fanciness
         historyBar.textContent = mainExpr + "=";
+
+        addToHistory(mainExpr);
 
         // Get out of the function to handle next iteration
         return;
