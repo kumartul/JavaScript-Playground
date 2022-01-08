@@ -12,6 +12,11 @@ const cells = document.querySelectorAll('.cell');
 // by the latest character
 let monotonyBreak = false;
 
+// gotResult will be set to true as soon as the user presses '=' button
+// If user has got the result, then when he/she will enter the new character, first both 
+// the input fields will be cleared
+let gotResult = false;
+
 // Iterate through every cell
 /*
     1. Get the textContent of the cell on which the user clicks
@@ -82,12 +87,11 @@ cells.forEach(cell => cell.addEventListener('click', () => {
 
     // If the user presses '='
     if(char === "="){
+        gotResult = true;
+
         let historyExpr;    // Expression in the historyBar
         let resultExpr;     // Expression in the resultBar
         let mainExpr;       // Main expression formed after computation
-
-        // Break the monotony so that the calculator can accept fresh input
-        monotonyBreak = true;
 
         // If the resultBar's value is empty, then set it to 0
         if(resultBar.textContent === ""){
@@ -132,6 +136,13 @@ cells.forEach(cell => cell.addEventListener('click', () => {
         
         // Get out of the function to handle next iteration
         return;
+    }
+
+    if(gotResult){
+        gotResult = false;
+
+        historyBar.textContent = "";
+        resultBar.textContent = "";
     }
 
     // Add the current character to resultBar
