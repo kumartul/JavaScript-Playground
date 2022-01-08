@@ -12,13 +12,4 @@
     ],
     "names": [],
     "file": "main.css"
-}EACH,gBAAgB,EAAE,OAA4C;EAE9D,UAAU,EAAE,KAAK;CACpB;;AAhJrB,AAoJY,UApJF,CAwFN,KAAK,CAMD,IAAI,CAsDA,KAAK,AAAA,MAAM,CAAA;EACP,gBAAgB,EAAE,kBAAkB;EAEpC,UAAU,EAAE,KAAK;CACpB",
-    "sources": [
-        "../../Calculator/scss/main.scss",
-        "../../Calculator/scss/_config.scss",
-        "../../Calculator/scss/_variables.scss",
-        "../../Calculator/scss/_generics.scss"
-    ],
-    "names": [],
-    "file": "main.css"
 }

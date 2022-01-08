@@ -158,6 +158,22 @@ const fetchFavUsers = () => {
 
 // Function: Displays the favorite users
 const displayFavUsers = (favUsers, container) => {
+    // If there are no favorite users, then display a message
+    if(!favUsers || favUsers == []){
+        container.innerHTML = `<h2>No Favourite User!</h2>`;
+
+        // Center the contents of the container (both horizontally and vertically)
+        container.style.height = "90%";
+        container.style.display = "flex";
+        container.style.justifyContent = "center";
+        container.style.alignItems = "center";
+        
+        // Get out of the function as we would not like to iterate an undefined type
+        return;
+    }
+
+    // Iterate through each favUser and fetch their details using the API and create a 
+    // toast out of it
     favUsers.forEach(async favUser => {
         const response = await fetch(api_url + favUser);
         const responseData = await response.json();
