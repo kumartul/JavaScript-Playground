@@ -147,6 +147,32 @@ const fetchUser = async user => {
     populateContainer(responseData);
 }
 
+// Function: Fetches all the users from the favoritesList
+const fetchFavUsers = () => {
+    const favUsers = JSON.parse(localStorage.getItem(favoritesListKeyName));
+
+    return favUsers;
+}
+
+// Function: Displays the favorite users
+const displayFavUsers = (favUsers, container) => {
+    favUsers.forEach(async favUser => {
+        const response = await fetch(api_url + favUser);
+        const responseData = await response.json();
+
+        container.innerHTML += 
+        `<div class = "toast">
+            <div class = "image">
+                <img src = "${responseData.avatar_url}" alt = "${responseData.login}'s profile pic">
+            </div>
+            <div class = "info">
+                <p><strong>${responseData.login}</strong> (${responseData.name})</p>
+                <p><strong>Followers: </strong> ${responseData.followers} <strong>Following: </strong> ${favUser.following}</p>
+            </div>
+        </div>`;
+    });
+}
+
 // Add an event listener to the searchBar
 /*
     1. If a user presses the enter key, the value in the search bar will be stored in a 
@@ -164,5 +190,8 @@ searchBar.addEventListener('keydown', event => {
 // Add a click event listener to the heart button that will navigate the user to 
 // favoritesList
 favoriteHeartBtn.addEventListener('click', () => {
+    // Clear the container so that new content can be shown
     userContainer.innerHTML = ``;
+
+    displayFavUsers(fetchFavUsers(), userContainer);
 });
