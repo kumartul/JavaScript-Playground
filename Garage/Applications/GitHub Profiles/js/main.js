@@ -9,6 +9,8 @@ const searchBar = document.getElementById('search');
 // Button that will navigate the user to the favoritesList
 const favoriteHeartBtn = document.querySelector('.heart');
 
+const childContainer = document.querySelector('.child-container');
+
 // Name of the key to store favorites list in the localStorage
 const favoritesListKeyName = "favorites";
 
@@ -160,14 +162,14 @@ const displayFavUsers = (favUsers, container) => {
         const response = await fetch(api_url + favUser);
         const responseData = await response.json();
 
-        document.querySelector('.child-container').innerHTML += 
+        childContainer.innerHTML += 
         `<div class = "toast">
             <div class = "image">
                 <img src = "${responseData.avatar_url}" alt = "${responseData.login}'s profile pic">
             </div>
             <div class = "info">
                 <p><strong>${responseData.login}</strong> (${responseData.name})</p>
-                <p><strong>Followers: </strong> ${responseData.followers} <strong>Following: </strong> ${responseData.following}</p>
+                <p><strong>Followers: </strong> ${responseData.followers}  &nbsp;&nbsp;&nbsp; <strong>Following: </strong> ${responseData.following}</p>
             </div>
         </div>`;
     });
@@ -182,7 +184,7 @@ const displayFavUsers = (favUsers, container) => {
 searchBar.addEventListener('keydown', event => {
     if(event.key === "Enter"){
         const username = searchBar.value;
-
+        
         fetchUser(username);
     }
 });
@@ -191,7 +193,10 @@ searchBar.addEventListener('keydown', event => {
 // favoritesList
 favoriteHeartBtn.addEventListener('click', () => {
     // Clear the container so that new content can be shown
-    document.querySelector('.child-container').innerHTML = ``;
+    childContainer.innerHTML = ``;
+
+    // Add the 'fav' class to childContainer to avoid weird styling
+    childContainer.classList.add('fav');
 
     displayFavUsers(fetchFavUsers(), userContainer);
 });
