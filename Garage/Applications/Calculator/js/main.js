@@ -150,7 +150,7 @@ cells.forEach(cell => cell.addEventListener('click', () => {
     resultBar.textContent += char;
 
     // If the current character is an operator (+-*/)
-    if(operators.slice(0, operators.length - 1).includes(char)){
+    if(operators.slice(0, operators.length).includes(char)){
         // If the first character of the resultBar is NOT an operator and the previous
         // character is not (.), then only break the monotony
         if(!(operators.includes(resultBar.textContent[0])) && (resultBar.textContent[resultBar.textContent.indexOf(char) - 1] !== ".")){
@@ -169,14 +169,14 @@ cells.forEach(cell => cell.addEventListener('click', () => {
 
     // If the first character of the historyBar is an operator (+-*/), then set the value of 
     // historyBar to empty and that of resultBar to 0
-    if(operators.slice(0, operators.length - 1).includes(historyBar.textContent[0])){
+    if(operators.slice(0, operators.length).includes(historyBar.textContent[0])){
         historyBar.textContent = "";
         resultBar.textContent = "0";
     }
     
     // If the first character of the resultBar is an operator (+-*/), then set the value of
     // the resultBar to 0
-    if(operators.slice(0, operators.length - 1).includes(resultBar.textContent[0])){
+    if(operators.slice(0, operators.length).includes(resultBar.textContent[0])){
         resultBar.textContent = "0";
     }
 
