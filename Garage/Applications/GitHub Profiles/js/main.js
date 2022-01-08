@@ -6,6 +6,9 @@ const userContainer = document.querySelector('.container .user');
 
 const searchBar = document.getElementById('search');
 
+// Button that will navigate the user to the favoritesList
+const favoriteHeartBtn = document.querySelector('.heart');
+
 // Name of the key to store favorites list in the localStorage
 const favoritesListKeyName = "favorites";
 
@@ -49,6 +52,16 @@ const addToFavorites = username => {
     localStorage.setItem(favoritesListKeyName, JSON.stringify(favoritesArr));
 }
 
+// Function: Checks if the user exists in favoritesList
+const userInFavList = username => {
+    let favoritesArr = JSON.parse(localStorage.getItem(favoritesListKeyName));
+
+    // If favoritesArr doesn't exists, then initialize an empty array
+    if(!favoritesArr) favoritesArr = [];
+
+    return favoritesArr.includes(username) ? true : false;
+}
+
 // Function: Populates the userContainer
 const populateContainer = data => {
     // Initialize 'username' global variable to handle further operations
@@ -89,6 +102,14 @@ const populateContainer = data => {
 
     // Grab the reference to the heart icon
     const heartIcon = userContainer.querySelector('.fa-heart');
+
+    // If the user is in favoritesList, then set the state to 'in' and change the color of
+    // icon to 'orangered'
+    if(userInFavList(username)){
+        heartIcon.setAttribute("data-state", "in");
+
+        heartIcon.style.color = "orangered";
+    }
 
     // Add a click event listener to the heart icon
     /*
@@ -138,4 +159,10 @@ searchBar.addEventListener('keydown', event => {
 
         fetchUser(username);
     }
+});
+
+// Add a click event listener to the heart button that will navigate the user to 
+// favoritesList
+favoriteHeartBtn.addEventListener('click', () => {
+    userContainer.innerHTML = ``;
 });
