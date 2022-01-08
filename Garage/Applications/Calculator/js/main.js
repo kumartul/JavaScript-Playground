@@ -1,4 +1,4 @@
-const operators = ["+", "-", "*", "/", "±"];
+const operators = ["+", "-", "*", "/", "^"];
 
 // Get a reference to all the input fields
 const resultBar = document.querySelector('.result');
@@ -138,6 +138,7 @@ cells.forEach(cell => cell.addEventListener('click', () => {
         return;
     }
 
+    // If the user has got the results, then clear the input fields
     if(gotResult){
         gotResult = false;
 
