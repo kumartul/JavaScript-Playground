@@ -126,6 +126,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: scroll;
+  height: 90%;
 }
 
 .container .fav .image {
