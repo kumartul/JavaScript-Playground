@@ -167,7 +167,7 @@ const displayFavUsers = (favUsers, container) => {
             </div>
             <div class = "info">
                 <p><strong>${responseData.login}</strong> (${responseData.name})</p>
-                <p><strong>Followers: </strong> ${responseData.followers} <strong>Following: </strong> ${favUser.following}</p>
+                <p><strong>Followers: </strong> ${responseData.followers} <strong>Following: </strong> ${responseData.following}</p>
             </div>
         </div>`;
     });
