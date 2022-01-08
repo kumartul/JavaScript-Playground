@@ -27,6 +27,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .container {
@@ -157,8 +158,7 @@ body {
   display: flex;
 }
 
-.container .rows .row .cell,
-.container .rows .row .u_cell {
+.container .rows .row .cell {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,8 +180,7 @@ body {
   transition: 0.15s;
 }
 
-.container .rows .row .cell:last-of-type,
-.container .rows .row .u_cell:last-of-type {
+.container .rows .row .cell:last-of-type {
   background-color: #fafafa;
   font-weight: 300;
   font-size: 2.5rem;
@@ -208,5 +207,16 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.15s;
   transition: 0.15s;
+}
+
+.container .history-sheet {
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  position: relative;
+  bottom: -1.5rem;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=main.css.map */

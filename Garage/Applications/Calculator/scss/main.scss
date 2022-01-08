@@ -156,4 +156,18 @@
             }
         }
     }
+
+    .history-sheet{
+        width: 100%;
+        height: 70%;
+
+        background-color: white;
+
+        position: relative;
+        bottom: -1.5rem;
+        
+        border-radius: 1rem;
+
+        transition: 0.5s;
+    }
 }
