@@ -1,0 +1,60 @@
+.container{
+    .fav{
+        @include flex-col;
+
+        .image{
+            width: 5rem;
+            height: 5rem;
+            img{
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        .toast{
+            display: flex;
+
+            margin: 1rem;
+
+            .info{
+                @include flex-col;
+
+                margin-left: 2rem;
+                
+                justify-content: center;
+
+                p{
+                    line-height: 1.5;    
+                    font-size: 1.5rem;                
+                }
+
+                margin-right: auto;
+            }
+
+            .view{
+                @include content-center;
+                
+                button{
+                    color: white;
+                    font-size: 1.5rem;
+
+                    background-color: #0082e6;
+
+                    border: none;
+
+                    padding: 0.5rem 1rem;
+
+                    cursor: pointer;
+
+                    transition: 0.5s;
+
+                    &:hover{
+                        transition: 0.5s;
+
+                        background-color: #1b9bff;
+                    }
+                }
+            }
+        }
+    }
+}

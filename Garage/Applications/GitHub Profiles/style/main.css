@@ -117,35 +117,8 @@ body {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-/*# sourceMappingURL=main.css.map */: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
 
-.container .result {
-  height: 5rem;
-  padding: 0.25rem;
-  padding-right: 1rem;
-  font-size: 4rem;
-  font-weight: 500;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.container .rows {
+.container .fav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,19 +126,46 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3px;
-  margin-top: 1rem;
 }
 
-.container .rows .row {
+.container .fav .image {
+  width: 5rem;
+  height: 5rem;
+}
+
+.container .fav .image img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.container .fav .toast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1rem;
 }
 
-.container .rows .row .cell,
-.container .rows .row .u_cell {
-  width: 100%;
+.container .fav .toast .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+}
+
+.container .fav .toast .info p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.container .fav .toast .view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,19 +175,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1px;
-  height: 5.5rem;
-  background-color: white;
-  font-size: 1.75rem;
-  font-weight: bold;
-  border-radius: 1rem;
-  cursor: pointer;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
 }
 
-.container .rows .row .cell:last-of-type,
-.container .rows .row .u_cell:last-of-type {
+.container .fav .toast .view button {
+  color: white;
+  font-size: 1.5rem;
+  background-color: #0082e6;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .fav .toast .view button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #1b9bff;
+}
+/*# sourceMappingURL=main.css.map */rows .row .u_cell:last-of-type {
   background-color: #fafafa;
   font-weight: 300;
   font-size: 2.5rem;

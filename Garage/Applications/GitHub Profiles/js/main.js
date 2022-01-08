@@ -162,7 +162,7 @@ const displayFavUsers = (favUsers, container) => {
         const response = await fetch(api_url + favUser);
         const responseData = await response.json();
 
-        childContainer.innerHTML += 
+        container.innerHTML += 
         `<div class = "toast">
             <div class = "image">
                 <img src = "${responseData.avatar_url}" alt = "${responseData.login}'s profile pic">
@@ -171,7 +171,19 @@ const displayFavUsers = (favUsers, container) => {
                 <p><strong>${responseData.login}</strong> (${responseData.name})</p>
                 <p><strong>Followers: </strong> ${responseData.followers}  &nbsp;&nbsp;&nbsp; <strong>Following: </strong> ${responseData.following}</p>
             </div>
+            <div class = "view">
+                <button class = "view-btn" data-username = "${responseData.login}">View</button>
+            </div>
         </div>`;
+
+        // Grab the reference to all the view buttons
+        const viewBtns = Array.from(document.querySelectorAll('.view-btn'));
+
+        // Iterate through every viewBtn and add an event listener to each of them
+        viewBtns.forEach(viewBtn => viewBtn.addEventListener('click', event => {
+            const username = event.target.getAttribute("data-username");
+            window.location = `https://github.com/${username}`;
+        }));
     });
 }
 
@@ -191,12 +203,12 @@ searchBar.addEventListener('keydown', event => {
 
 // Add a click event listener to the heart button that will navigate the user to 
 // favoritesList
-favoriteHeartBtn.addEventListener('click', () => {
+favoriteHeartBtn.addEventListener('click', async () => {
     // Clear the container so that new content can be shown
     childContainer.innerHTML = ``;
 
     // Add the 'fav' class to childContainer to avoid weird styling
     childContainer.classList.add('fav');
-
-    displayFavUsers(fetchFavUsers(), userContainer);
+    
+    displayFavUsers(fetchFavUsers(), childContainer);
 });
