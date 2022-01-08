@@ -106,9 +106,15 @@ cells.forEach(cell => cell.addEventListener('click', () => {
             historyExpr = historyExpr.slice(0, historyExpr.length - 1);
         }
 
-        mainExpr = historyExpr + resultExpr;
+        // Replace '^' with '**' so that unwanted behavior can be prevented
+        historyExpr = historyExpr.replace(/\^/g, "**");
+
+        mainExpr = historyExpr + resultExpr;    
 
         resultBar.textContent = eval(mainExpr);
+
+        // Replace '**' with '^' so that it doesn't seems unfamiliar to the user
+        mainExpr = mainExpr.replace(/\*{2}/g, "^");
 
         // Add the '=' sign for fanciness
         historyBar.textContent = mainExpr + "=";
