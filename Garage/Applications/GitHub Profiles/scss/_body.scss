@@ -39,15 +39,31 @@
     }
 
     .user{
+        // This heart will be used to add/remove user from favoritesList
         .fa-heart{
             //      top  right  bottom left
             margin: 2rem 1.5rem 2rem auto;
 
             font-size: 3rem;
-
             color: lightgrey;
 
             cursor: pointer;
+        }
+        // This heart will navigate the user to the favoritesList
+        .heart{
+            margin: 0;
+            margin-top: 2.5rem;
+
+            font-size: 5rem;
+            color: red;
+
+            transition: 0.5s;
+
+            &:hover{
+                transition: 0.5s;
+
+                transform: scale(1.1);
+            }
         }
     }
 }

@@ -101,24 +101,23 @@ body {
   color: lightgrey;
   cursor: pointer;
 }
-/*# sourceMappingURL=main.css.map */der: none;
-  cursor: pointer;
+
+.container .user .heart {
+  margin: 0;
+  margin-top: 2.5rem;
+  font-size: 5rem;
+  color: red;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.container .header .view-history button i {
-  font-size: 1.8rem;
+.container .user .heart:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-
-.container .history {
-  height: 3rem;
-  padding: 0.25rem;
-  padding-right: 1rem;
-  font-size: 1.5rem;
-  color: grey;
-  letter-spacing: 1px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*# sourceMappingURL=main.css.map */: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
