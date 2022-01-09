@@ -14,7 +14,7 @@
 
     .password{
         width: auto;
-        height: 4rem;
+        height: 5rem;
 
         margin: 1rem;
         
@@ -27,6 +27,8 @@
         color: #4a4a4a;
         font-size: 1.75rem;
         font-weight: 500;
+
+        overflow-x: scroll;
 
         @include content-center;
     }
