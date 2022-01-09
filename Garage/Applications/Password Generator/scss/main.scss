@@ -30,6 +30,11 @@
 
         overflow-x: scroll;
 
+        word-break: keep-all;
+
+        padding: 0 3rem;
+        padding-left: 40rem;
+
         @include content-center;
     }
 

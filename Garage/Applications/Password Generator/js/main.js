@@ -95,7 +95,7 @@ generatePasswordBtn.addEventListener('click', () => {
     
     const passwordLength = Number(passwordLengthField.value);
 
-    if(passwordLength >= paramCount && paramCount > 0 && passwordLength < 121){
+    if(passwordLength >= paramCount && paramCount > 0 && passwordLength < 81){
         displayPassword(generatePassword(hasNums, hasSpecialChars, hasUppercaseChars, hasLowercaseChars, passwordLength, parameters));
     }
 });

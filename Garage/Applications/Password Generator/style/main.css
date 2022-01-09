@@ -49,6 +49,9 @@ body {
   font-size: 1.75rem;
   font-weight: 500;
   overflow-x: scroll;
+  word-break: keep-all;
+  padding: 0 3rem;
+  padding-left: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
