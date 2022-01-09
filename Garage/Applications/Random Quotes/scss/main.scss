@@ -1,3 +1,64 @@
 @import './generics';
 @import './config';
 @import './variables';
+
+.container{
+    width: $container-width;
+    height: $container-height;
+
+    background-color: white;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    .quote{
+        padding: 2rem;
+        h1{
+            filter: invert(0.5);
+        }
+        .text{
+            font-size: 2rem;
+            color: #242323;
+        }
+        .author{
+            width: fit-content;
+            
+            margin-left: auto;
+            margin-top: 2.5rem;
+
+            font-size: 1.75rem;
+        }
+    }
+
+    // Next Button
+    .next{
+        background-color: #0082e6;
+
+        border: none;
+        border-radius: 0 0 1rem 1rem;
+
+        width: $container-width;
+
+        position: absolute;
+
+        bottom: calc((100vh - 30rem)/2);
+
+        padding: 1rem;
+
+        color: white;
+        font-size: 1.5rem;
+        font-family: tahoma;
+        letter-spacing: 1px;
+
+        cursor: pointer;
+
+        transition: 0.5s;
+
+        &:hover{
+            transition: 0.5s;
+
+            background-color: #1b9bff;
+        }
+    }
+}
