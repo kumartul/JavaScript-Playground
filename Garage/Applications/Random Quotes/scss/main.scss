@@ -31,34 +31,36 @@
         }
     }
 
-    // Next Button
-    .next{
-        background-color: #0082e6;
-
-        border: none;
-        border-radius: 0 0 1rem 1rem;
-
-        width: $container-width;
-
+    .btn-container{
         position: absolute;
-
         bottom: calc((100vh - 30rem)/2);
 
-        padding: 1rem;
+        .fav{
+            @include btn;
 
-        color: white;
-        font-size: 1.5rem;
-        font-family: tahoma;
-        letter-spacing: 1px;
+            background-color: red;
 
-        cursor: pointer;
+            border-radius: 0 0 0 1rem;
 
-        transition: 0.5s;
+            &:hover{
+                transition: 0.5s;
 
-        &:hover{
-            transition: 0.5s;
+                background-color: rgb(241, 79, 79);
+            }
+        }
+        // Next Button
+        .next{
+            @include btn;
 
-            background-color: #1b9bff;
+            background-color: #0082e6;
+    
+            border-radius: 0 0 1rem 0;
+    
+            &:hover{
+                transition: 0.5s;
+    
+                background-color: #1b9bff;
+            }
         }
     }
 }

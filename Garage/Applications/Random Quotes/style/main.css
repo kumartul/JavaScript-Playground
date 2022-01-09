@@ -60,24 +60,48 @@ body {
   font-size: 1.75rem;
 }
 
-.container .next {
-  background-color: #0082e6;
-  border: none;
-  border-radius: 0 0 1rem 1rem;
-  width: 70rem;
+.container .btn-container {
   position: absolute;
   bottom: calc((100vh - 30rem)/2);
-  padding: 1rem;
+}
+
+.container .btn-container .fav {
+  border: none;
+  width: 35rem;
   color: white;
   font-size: 1.5rem;
   font-family: tahoma;
   letter-spacing: 1px;
+  padding: 1rem;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: red;
+  border-radius: 0 0 0 1rem;
 }
 
-.container .next:hover {
+.container .btn-container .fav:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #f14f4f;
+}
+
+.container .btn-container .next {
+  border: none;
+  width: 35rem;
+  color: white;
+  font-size: 1.5rem;
+  font-family: tahoma;
+  letter-spacing: 1px;
+  padding: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #0082e6;
+  border-radius: 0 0 1rem 0;
+}
+
+.container .btn-container .next:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #1b9bff;
