@@ -14,7 +14,7 @@
 @mixin btn {
     border: none;
 
-    width: $container-width/2;
+    width: $container-width/2 - 0.1vw;
 
     color: white;
     font-size: 1.5rem;
@@ -26,4 +26,12 @@
     cursor: pointer;
 
     transition: 0.5s;
+
+    @include responsive(800px){
+        width: 35vw;
+    }
+
+    @include responsive(500px){
+        width: 49vw;
+    }
 }

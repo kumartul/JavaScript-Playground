@@ -29,13 +29,25 @@ body {
 }
 
 .container {
-  width: 70rem;
+  width: 51.3vw;
   height: 30rem;
   background-color: white;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
 }
 
 .container .toast {
@@ -79,10 +91,22 @@ body {
 .container .quote .author .heart {
   position: absolute;
   top: 18rem;
-  right: 36rem;
+  right: 28.15vw;
   font-size: 2rem;
   color: lightgrey;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .container .quote .author .heart {
+    right: 20.65vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .quote .author .heart {
+    right: 5.65vw;
+  }
 }
 
 .container .btn-container {
@@ -92,7 +116,7 @@ body {
 
 .container .btn-container .fav {
   border: none;
-  width: 35rem;
+  width: 25.55vw;
   color: white;
   font-size: 1.5rem;
   font-family: tahoma;
@@ -105,6 +129,18 @@ body {
   border-radius: 0 0 0 1rem;
 }
 
+@media (max-width: 800px) {
+  .container .btn-container .fav {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .btn-container .fav {
+    width: 49vw;
+  }
+}
+
 .container .btn-container .fav:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -113,7 +149,7 @@ body {
 
 .container .btn-container .next {
   border: none;
-  width: 35rem;
+  width: 25.55vw;
   color: white;
   font-size: 1.5rem;
   font-family: tahoma;
@@ -124,6 +160,18 @@ body {
   transition: 0.5s;
   background-color: #0082e6;
   border-radius: 0 0 1rem 0;
+}
+
+@media (max-width: 800px) {
+  .container .btn-container .next {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .btn-container .next {
+    width: 49vw;
+  }
 }
 
 .container .btn-container .next:hover {

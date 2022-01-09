@@ -1,10 +1,20 @@
 @import './generics';
 @import './config';
 @import './variables';
+@import './responsive';
+
 
 .container{
     width: $container-width;
     height: $container-height;
+
+    @include responsive(800px){
+        width: 70vw;
+    }
+
+    @include responsive(500px){
+        width: 100vw;
+    }
 
     background-color: white;
 
@@ -49,12 +59,20 @@
             .heart{
                 position: absolute;
                 top: $container-height/2 + 3rem;
-                right: $container-width/2 + 1rem;
+                right: $container-width/2 + 2.5vw;
 
                 font-size: 2rem;
                 color: lightgrey;
 
                 cursor: pointer;
+
+                @include responsive(800px){
+                    right: $container-width/2 - 5vw;
+                }
+
+                @include responsive(500px){
+                    right: $container-width/2 - 20vw;
+                }
             }
         }
     }
