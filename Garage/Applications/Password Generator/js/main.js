@@ -7,7 +7,7 @@ const params = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 const passwordLengthField = document.getElementById('password-length');
 
 // Password will be printed here
-const passwordContainer = document.querySelector('.password');
+const passwordContainer = document.querySelector('.password').querySelector('p');
 
 // Sets
 const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";

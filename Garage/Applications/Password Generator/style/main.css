@@ -49,6 +49,8 @@ body {
   font-size: 1.75rem;
   font-weight: 500;
   overflow-x: scroll;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
   word-break: keep-all;
   padding: 0 3rem;
   padding-left: 40rem;
