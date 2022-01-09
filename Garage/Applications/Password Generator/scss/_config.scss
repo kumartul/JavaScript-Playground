@@ -17,6 +17,8 @@ html{
 }
 body{
     height: 100vh;
-    
+
     @include content-center;
+
+    background-color: whitesmoke;
 }

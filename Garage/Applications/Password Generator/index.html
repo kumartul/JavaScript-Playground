@@ -20,6 +20,33 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="password">
+            
+        </div>
+        <div class="params">
+            <div class="param">
+                <label for="uppercase-letters">Uppercase Letters</label>
+                <input type="checkbox" name="params" id="uppercase-letters">
+            </div>
+            <div class="param">
+                <label for="lowercase-letters">Lowercase Letters</label>
+                <input type="checkbox" name="params" id="lowercase-letters">
+            </div>
+            <div class="param">
+                <label for="special-characters">Special Characters</label>
+                <input type="checkbox" name="params" id="special-characters">
+            </div>
+            <div class="param">
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" name="params" id="numbers">
+            </div>
+            <div class="param">
+                <label for="password-length">Password Length</label>
+                <input type="number" name="params" id="password-length" value = "8">
+            </div>
+        </div>
+        <button id = "generate-password">Generate Password</button>
+    </div>
 </body>
 </html>
