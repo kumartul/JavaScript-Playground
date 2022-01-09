@@ -10,3 +10,27 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin status-box($background-color) {
+    background-color: $background-color;
+            
+    width: fit-content;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 1px;
+
+    i{
+        background-color: white;
+        
+        border-radius: 50%;
+
+        padding: 0.5rem;
+
+        color: $background-color;
+
+        margin-left: 1rem;
+    }
+}
