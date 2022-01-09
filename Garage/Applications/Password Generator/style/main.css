@@ -83,6 +83,13 @@ body {
   cursor: pointer;
 }
 
+.container .params .param input[type="number"] {
+  border: 1px solid lightgrey;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+}
+
 .container #generate-password {
   background-color: #0082e6;
   border: 0;
