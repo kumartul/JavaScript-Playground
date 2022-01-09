@@ -19,4 +19,8 @@ Create and Destroy
 <img src = "./public/images/Random Quotes 0.png">
 <img src = "./public/images/Random Quotes 1.png">
 
+### Password Generator
+<img src = "./public/images/Password Generator 0.png">
+<img src = "./public/images/Password Generator 1.png">
+
 ---
