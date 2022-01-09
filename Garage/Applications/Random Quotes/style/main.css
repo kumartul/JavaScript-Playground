@@ -35,6 +35,22 @@ body {
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+.container .toast {
+  margin: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.container .toast p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.container .toast strong {
+  color: #4a4a4a;
 }
 
 .container .quote {
@@ -58,6 +74,15 @@ body {
   margin-left: auto;
   margin-top: 2.5rem;
   font-size: 1.75rem;
+}
+
+.container .quote .author .heart {
+  position: absolute;
+  top: 18rem;
+  right: 36rem;
+  font-size: 2rem;
+  color: lightgrey;
+  cursor: pointer;
 }
 
 .container .btn-container {

@@ -12,6 +12,23 @@
 
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 
+    overflow-y: scroll;
+
+    .toast{
+        margin: 1rem;
+        padding-bottom: 0.5rem;
+
+        border-bottom: 1px solid lightgrey;
+        
+        p{
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        strong{
+            color: #4a4a4a;
+        }
+    }
+
     .quote{
         padding: 2rem;
         h1{
@@ -28,6 +45,17 @@
             margin-top: 2.5rem;
 
             font-size: 1.75rem;
+
+            .heart{
+                position: absolute;
+                top: $container-height/2 + 3rem;
+                right: $container-width/2 + 1rem;
+
+                font-size: 2rem;
+                color: lightgrey;
+
+                cursor: pointer;
+            }
         }
     }
 
