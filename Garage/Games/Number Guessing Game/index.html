@@ -10,6 +10,9 @@
     <!-- Title -->
     <title>Guess the Number</title>
 
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="./public/icons/favicon.png">
 
@@ -20,6 +23,32 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <p>
+            We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your
+            guess was too high or too low.
+        </p>
+
+        <div class="input">
+            <span>Enter a guess: </span><input type="number" min = "1" max = "99" id = "guess-number"><button>Submit Guess</button>
+        </div>
+        <div class="previous-guesses-bar">
+            <span>Previous Guesses: </span>
+        </div>
+        <div class="status">
+            <div class="correct">
+                <span> Correct <i class="fa fa-check"></i></span>
+            </div>
+            <div class="incorrect">
+                <span> Incorrect <i class="fa fa-close"></i></span>
+            </div>
+            <div class="out-of-moves">
+                <span> Out of Moves <i class="fa fa-thumbs-down"></i></span>
+            </div>
+        </div>
+        <div class="problem">
+            
+        </div>
+    </div>
 </body>
 </html>

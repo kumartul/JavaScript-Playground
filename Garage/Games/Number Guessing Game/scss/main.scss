@@ -1,3 +1,143 @@
 @import './variables';
 @import './generics';
 @import './config';
+
+.container{
+    width: $container-width;
+    height: $container-height;
+
+    border-radius: 1rem;
+
+    background-color: white;
+
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
+
+    p{
+        color: $black-0;
+        font-size: 1.7rem;
+
+        margin: -3rem 3rem;
+
+        &::before{
+            content: "";
+
+            position: relative;
+            right: 2rem;
+            top: 4.5rem;
+
+            display: block;
+
+            height: 5rem;
+            width: 5px;
+
+            background-color: $black-0;
+        }
+    }
+    .input{
+        margin: 8rem 3rem;
+
+        span{
+            color: $black-1;
+            font-size: 2rem;
+            font-family: tahoma;
+        }
+
+        input{
+            padding: 0.5rem 1rem;
+
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+
+            font-size: 1.75rem;
+            font-weight: bold;
+            font-family: 'Poor Story';
+            letter-spacing: 1px;
+
+            width: 15rem;
+
+            transition: 0.1s;
+
+            &:focus{
+                transition: 0.1s;
+
+                border: 2px solid $blue-0;
+            }
+        }
+        
+        button{
+            background-color: $blue-0;
+
+            color: white;
+            font-size: 1.5rem;
+
+            border: none;
+            border-radius: 3px;
+
+            padding: 0.85rem 1rem;
+            margin-left: 1rem;
+            
+            cursor: pointer;
+
+            transition: 0.5s;
+
+            &:hover{
+                transition: 0.5s;
+
+                background-color: $blue-1;
+            }
+        }
+    }
+
+    .previous-guesses-bar{
+        margin: -5rem 3rem;
+
+        font-size: 1.6rem;
+
+        span:first-of-type{
+            margin-right: 1rem;
+        }
+
+        .num{
+            background-color: rgb(192, 17, 192);
+            
+            border-radius: 50%;
+            
+            padding: 1rem;
+
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+
+    .status{
+        margin: 7rem 3rem;
+
+        .correct{
+            @include status-box($green-0);
+        }
+        .incorrect{
+            @include status-box($red-0);
+        }
+        .out-of-moves{
+            @include status-box($yellow-0);
+        }
+    }
+
+    .problem{
+        width: $container-width;
+
+        background-color: black;
+
+        color: white;
+        font-size: 1.5rem;
+
+        padding: 1rem 1.5rem;
+
+        border-radius: 0 0 1rem 1rem;
+
+        position: absolute;
+        bottom: $container-height/2;
+
+        transition: 0.5s;
+    }
+}

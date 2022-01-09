@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poor+Story:regular);
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: whitesmoke;
+}
+
+.container {
+  width: 70rem;
+  height: 30rem;
+  border-radius: 1rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.container p {
+  color: #4a4a4a;
+  font-size: 1.7rem;
+  margin: -3rem 3rem;
+}
+
+.container p::before {
+  content: "";
+  position: relative;
+  right: 2rem;
+  top: 4.5rem;
+  display: block;
+  height: 5rem;
+  width: 5px;
+  background-color: #4a4a4a;
+}
+
+.container .input {
+  margin: 8rem 3rem;
+}
+
+.container .input span {
+  color: #181717;
+  font-size: 2rem;
+  font-family: tahoma;
+}
+
+.container .input input {
+  padding: 0.5rem 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: 'Poor Story';
+  letter-spacing: 1px;
+  width: 15rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.container .input input:focus {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border: 2px solid #0082e6;
+}
+
+.container .input button {
+  background-color: #0082e6;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  padding: 0.85rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .input button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #1b9bff;
+}
+
+.container .previous-guesses-bar {
+  margin: -5rem 3rem;
+  font-size: 1.6rem;
+}
+
+.container .previous-guesses-bar span:first-of-type {
+  margin-right: 1rem;
+}
+
+.container .previous-guesses-bar .num {
+  background-color: #c011c0;
+  border-radius: 50%;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.container .status {
+  margin: 7rem 3rem;
+}
+
+.container .status .correct {
+  background-color: #2ac72a;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.container .status .correct i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #2ac72a;
+  margin-left: 1rem;
+}
+
+.container .status .incorrect {
+  background-color: #f51d1d;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.container .status .incorrect i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #f51d1d;
+  margin-left: 1rem;
+}
+
+.container .status .out-of-moves {
+  background-color: #e3e319;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.container .status .out-of-moves i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #e3e319;
+  margin-left: 1rem;
+}
+
+.container .problem {
+  width: 70rem;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  position: absolute;
+  bottom: 15rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=main.css.map */
