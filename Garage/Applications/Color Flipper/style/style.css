@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+    
+    list-style: none;
+
+    box-sizing: border-box;     /* Use the alternate box model instead of the standard one */
+
+    outline: none;
+}
+html{
+    font-family: tahoma;
+}
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    background-color: #0082e6;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+button:hover{
+    transition: 0.5s;
+
+    background-color: #1b9bff;
+}
