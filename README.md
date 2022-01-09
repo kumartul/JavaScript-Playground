@@ -16,6 +16,7 @@ Create and Destroy
 </div>
 
 ### Random Quotes Generator
-<img src = "./public/images/Random Quotes.png">
+<img src = "./public/images/Random Quotes 0.png">
+<img src = "./public/images/Random Quotes 1.png">
 
 ---
